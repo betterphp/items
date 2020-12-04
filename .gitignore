@@ -1,0 +1,10 @@
+# Vim stuff
+*.swp
+*.swo
+/Session.vim
+
+# Exported files
+*.stl
+# This one is used by another model
+!/snowflake_pendant.stl
+
