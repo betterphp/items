@@ -12,6 +12,12 @@ intersection() {
     square([20, 10], center = true);
 }
 
+translate([-center_diameter / 2, -5, 0])
+cube([center_diameter, 10, 1]);
+
+translate([-5, -center_diameter / 2, 0])
+cube([10, center_diameter, 1]);
+
 radius = center_diameter / 2;
 peg_angle = 360 / total_pegs;
 
