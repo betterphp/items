@@ -7,7 +7,9 @@ $fs = 0.875;
 difference() {
     card_face();
 
-    translate([0, 0, 1.001]) {
-        render_text();
+    translate([0, 0, face_thickness - 1 + 0.001]) {
+        linear_extrude(height = 1) {
+            render_text();
+        }
     }
 }

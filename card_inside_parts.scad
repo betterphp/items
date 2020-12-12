@@ -1,3 +1,7 @@
 include<card_lib.scad>;
 
-render_text();
+linear_extrude(height = 1) {
+    offset(r = -0.25) {
+        render_text();
+    }
+}

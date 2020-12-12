@@ -4,17 +4,15 @@ $fs = 0.875;
 face_thickness = 3;
 card_height = 160;
 card_width = 100;
-text_size = 8;
+text_size = 9;
 
 module card_face() {
     cube([card_width, card_height, face_thickness]);
 }
 
 module text_line(text, x, y) {
-    linear_extrude(face_thickness - 1) {
-        translate([x, y])
-        text(text, text_size, "MathJax\\_SansSerif:style=Bold");
-    }
+    translate([x, y])
+    text(text, text_size, "Lato:style=Black");
 }
 
 module render_text() {
@@ -22,5 +20,5 @@ module render_text() {
     text_line("Merry 3D", 10, card_height / 2 + 7);
     text_line("christmas!", 10, card_height / 2 - 7);
     text_line("The most love", 10, 30);
-    text_line("from Jacek xx", 10, 16);
+    text_line("from Jacek <3", 10, 16);
 }
