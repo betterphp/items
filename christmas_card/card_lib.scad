@@ -5,6 +5,7 @@ face_thickness = 3;
 card_height = 160;
 card_width = 100;
 text_size = 9;
+tolerance = 0.25;
 
 module card_face() {
     cube([card_width, card_height, face_thickness]);
@@ -12,7 +13,7 @@ module card_face() {
 
 module text_line(text, x, y) {
     translate([x, y])
-    text(text, text_size, "Lato:style=Black");
+    text(text, text_size, "Lato:style=Bold");
 }
 
 module render_text() {
