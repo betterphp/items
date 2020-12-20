@@ -13,16 +13,16 @@ module letter(letter, size) {
 
 linear_extrude(height = 1)
 difference() {
-    square([22, 10]);
+    square([30, 18]);
 
     union() {
-        translate([4, 5])
+        translate([8, 9])
         letter("T", 7);
-        translate([10, 5])
+        translate([14, 9])
         letter("E", 6);
-        translate([15, 5])
+        translate([19, 9])
         letter("S", 5);
-        translate([19, 5])
+        translate([23, 9])
         letter("T", 4);
     }
 }

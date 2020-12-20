@@ -4,13 +4,9 @@ $fa = 6;
 $fs = 0.875;
 
 // Card back
-difference() {
+union() {
     card_face();
 
-    translate([face_thickness, face_thickness, 1])
-    cube([
-        card_width - 2 * face_thickness,
-        card_height - 2 * face_thickness,
-        face_thickness
-    ]);
+    translate([-1, 0, 0])
+    cube([1, card_height, 2 * face_thickness + tolerance]);
 }
