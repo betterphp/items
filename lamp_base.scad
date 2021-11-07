@@ -47,4 +47,14 @@ difference() {
 }
 
 // LED Mount
-cylinder(r = 3, h = base_height + 15);
+translate([20, 0, 0])
+cylinder(r = 4, h = base_height - 10);
+
+translate([-20, 0, 0])
+cylinder(r = 4, h = base_height - 10);
+
+translate([0, 20, 0])
+cylinder(r = 4, h = base_height - 10);
+
+translate([0, -20, 0])
+cylinder(r = 4, h = base_height - 10);
