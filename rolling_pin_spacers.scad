@@ -2,7 +2,7 @@ $fa = 1;
 $fs = 1.75 / 2;
 
 // Diameter of the rolling pin
-pin_diam = 30;
+pin_diam = 50;
 // Desired height of thing being rolld
 roll_height = 10;
 
@@ -13,15 +13,18 @@ text_depth = 1;
 // Size of the text
 text_size = (roll_height < 10) ? 3 : 5;
 
+// Radius of the rolling pin
+pin_rad = pin_diam / 2;
+
 difference() {
     linear_extrude(height = thickness) {
         difference() {
-            circle(r = pin_diam + roll_height);
-            circle(r = pin_diam);
+            circle(r = pin_rad + roll_height);
+            circle(r = pin_rad);
         }
     }
 
-    translate([0, pin_diam + roll_height / 2, thickness - text_depth])
+    translate([0, pin_rad + roll_height / 2, thickness - text_depth])
     linear_extrude(height = thickness) {
         text(
             text = str(roll_height / 10, "CM"),
