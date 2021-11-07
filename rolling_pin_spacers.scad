@@ -2,12 +2,12 @@ $fa = 1;
 $fs = 1.75 / 2;
 
 // Diameter of the rolling pin
-pin_diam = 50;
+pin_diam = 49.6;
 // Desired height of thing being rolld
 roll_height = 10;
 
 // Thickness of the disk
-thickness = 5;
+thickness = 8;
 // Depth of the embossed text
 text_depth = 1;
 // Size of the text
