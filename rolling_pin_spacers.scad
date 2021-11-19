@@ -9,7 +9,7 @@ roll_height = 10;
 // Thickness of the disk
 thickness = 8;
 // Depth of the embossed text
-text_depth = 1;
+text_depth = 0.4;
 // Size of the text
 text_size = (roll_height < 10) ? 3 : 5;
 
