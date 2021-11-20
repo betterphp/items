@@ -1,10 +1,10 @@
 $fa = 1;
 $fs = 1.75 / 2;
 
-switch_width = 200;
-switch_depth = 100;
-stand_height = 40;
-case_width = 120;
+switch_width = 237;
+switch_depth = 102;
+stand_height = 30;
+case_width = 115;
 
 thickness = 5;
 
@@ -71,8 +71,8 @@ module render_legs() {
 
 render_switch_base();
 
-translate([0, -stand_height - 10, 0])
+translate([switch_width / 2 - switch_depth / 2, 0, 0])
 render_legs();
 
-translate([0, -stand_height * 2 - 20, 0])
+translate([switch_width / 2 - switch_depth / 2, -stand_height - 10, 0])
 render_legs();
