@@ -8,5 +8,7 @@ border_radius = 14;
 thickness = 6;
 
 linear_extrude(height = thickness / 2) {
-    datacode_logo_2d(size);
+    offset(delta = -0.2) {
+        datacode_logo_2d(size);
+    }
 }
