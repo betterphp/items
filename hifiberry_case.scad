@@ -105,4 +105,10 @@ translate([-inner_width - 10, 0, -wall_thickness]) {
             }
         }
     }
+
+    translate([0, (inner_depth - wall_thickness) / 2, 0])
+    cube([inner_width, wall_thickness, wall_thickness]);
+
+    translate([(inner_width - wall_thickness) / 2, 0, 0])
+    cube([wall_thickness, inner_depth, wall_thickness]);
 }
