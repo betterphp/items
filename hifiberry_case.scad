@@ -44,33 +44,32 @@ difference() {
     translate([10, inner_depth - 1, inner_height + 0.001])
     cube([inner_width - 20, wall_thickness + 2, wall_thickness]);
 
-    // TODO: Correct sizes of these
     // ethernet port
     translate([inner_width - 4 - 16, inner_depth - 1, 4 + 1.3])
-    #cube([16, wall_thickness + 2, 13.8]);
+    cube([16, wall_thickness + 2, 13.8]);
 
     // USB ports
     translate([3, inner_depth - 1, 4 + 2])
-    #cube([15, wall_thickness + 2, 16]);
+    cube([15, wall_thickness + 2, 16]);
     translate([3 + 15 + 3, inner_depth - 1, 4 + 2])
-    #cube([15, wall_thickness + 2, 16]);
+    cube([15, wall_thickness + 2, 16]);
 
     // Micro USB power
     translate([inner_width - 1, 9, 5])
-    #cube([wall_thickness + 2, 10, 6]);
+    cube([wall_thickness + 2, 10, 6]);
 
     // HDMI port
     translate([inner_width - 1, 27, 5])
-    #cube([wall_thickness + 2, 16.5, 7]);
+    cube([wall_thickness + 2, 16.5, 7]);
 
     // RCA connectors
     translate([inner_width - 1, 37, 24])
     rotate([0, 90, 0])
-    #cylinder(r = 4.5, h = wall_thickness + 2);
+    cylinder(r = 4.5, h = wall_thickness + 2);
 
     translate([inner_width - 1, 37 + 16, 24])
     rotate([0, 90, 0])
-    #cylinder(r = 4.5, h = wall_thickness + 2);
+    cylinder(r = 4.5, h = wall_thickness + 2);
 }
 
 // screw pillars
