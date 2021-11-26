@@ -3,9 +3,9 @@ include<libs/screws.scad>;
 $fa = 1;
 $fs = 1.75 / 2;
 
-inner_width = 56;
-inner_depth = 85;
-inner_height = 36;
+inner_width = 60;
+inner_depth = 90;
+inner_height = 32 + 4; // pi height + screw pillars
 
 outer_curve_radius = 6;
 wall_thickness = 3;
@@ -46,44 +46,44 @@ difference() {
 
     // TODO: Correct sizes of these
     // ethernet port
-    translate([40, inner_depth - 1, 6])
-    #cube([12, wall_thickness + 2, 10]);
+    translate([inner_width - 4 - 16, inner_depth - 1, 4 + 1.3])
+    #cube([16, wall_thickness + 2, 13.8]);
 
     // USB ports
-    translate([20, inner_depth - 1, 6])
-    #cube([10, wall_thickness + 2, 12]);
-    translate([6, inner_depth - 1, 6])
-    #cube([10, wall_thickness + 2, 12]);
+    translate([3, inner_depth - 1, 4 + 2])
+    #cube([15, wall_thickness + 2, 16]);
+    translate([3 + 15 + 3, inner_depth - 1, 4 + 2])
+    #cube([15, wall_thickness + 2, 16]);
 
-    // Micro USO power
-    translate([inner_width - 1, 6, 6])
-    #cube([wall_thickness + 2, 8, 6]);
+    // Micro USB power
+    translate([inner_width - 1, 9, 5])
+    #cube([wall_thickness + 2, 10, 6]);
 
     // HDMI port
-    translate([inner_width - 1, 24, 6])
-    #cube([wall_thickness + 2, 16, 8]);
+    translate([inner_width - 1, 27, 5])
+    #cube([wall_thickness + 2, 16.5, 7]);
 
     // RCA connectors
-    translate([inner_width - 1, 36, 24])
+    translate([inner_width - 1, 37, 24])
     rotate([0, 90, 0])
-    #cylinder(r = 3, h = wall_thickness + 2);
+    #cylinder(r = 4.5, h = wall_thickness + 2);
 
-    translate([inner_width - 1, 46, 24])
+    translate([inner_width - 1, 37 + 16, 24])
     rotate([0, 90, 0])
-    #cylinder(r = 3, h = wall_thickness + 2);
+    #cylinder(r = 4.5, h = wall_thickness + 2);
 }
 
 // screw pillars
-translate([3, 3])
+translate([4.5, 6.5])
 screw_pillar(size = 1, height = 4);
 
-translate([inner_width - 3, 3])
+translate([inner_width - 4.5, 6.5])
 screw_pillar(size = 1, height = 4);
 
-translate([3, 60])
+translate([4.5, 6.5 + 58])
 screw_pillar(size = 1, height = 4);
 
-translate([inner_width - 3, 60])
+translate([inner_width - 4.5, 6.5 + 58])
 screw_pillar(size = 1, height = 4);
 
 // Lid
