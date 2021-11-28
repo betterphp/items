@@ -55,7 +55,7 @@ difference() {
     cube([15, wall_thickness + 2, 16]);
 
     // Micro USB power
-    translate([inner_width - 1, 9, 5])
+    translate([inner_width - 1, 9, 4.5])
     cube([wall_thickness + 2, 10, 6]);
 
     // HDMI port
@@ -65,11 +65,15 @@ difference() {
     // RCA connectors
     translate([inner_width - 1, 37, 24])
     rotate([0, 90, 0])
-    cylinder(r = 4.5, h = wall_thickness + 2);
+    cylinder(r = 5, h = wall_thickness + 2);
 
     translate([inner_width - 1, 37 + 16, 24])
     rotate([0, 90, 0])
-    cylinder(r = 4.5, h = wall_thickness + 2);
+    cylinder(r = 5, h = wall_thickness + 2);
+
+    // Space for 3.5mm jack
+    translate([inner_width - 0.5, 56 - 7 / 2, 0])
+    cube([2, 7, 14]);
 }
 
 // screw pillars
