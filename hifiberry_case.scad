@@ -3,7 +3,7 @@ include<libs/screws.scad>;
 $fa = 1;
 $fs = 1.75 / 2;
 
-inner_width = 60;
+inner_width = 58;
 inner_depth = 90;
 inner_height = 32 + 4; // pi height + screw pillars
 
