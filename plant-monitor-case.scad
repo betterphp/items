@@ -37,7 +37,6 @@ difference() {
                 pot_inner_distance + moisture_sensor_inset + moisture_sensor_case_outer_thickness / 2,
                 moisture_sensor_bar_thickness,
             ]);
-
         }
 
         // Case for the controller
