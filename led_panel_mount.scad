@@ -1,7 +1,7 @@
 $fa = 1;
 $fs = 1.75 / 2;
 
-wall_thickness = 2;
+wall_thickness = 2.4;
 outer_diameter = 180;
 height = 14;
 
