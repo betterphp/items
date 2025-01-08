@@ -3,14 +3,14 @@ $fs = 1.75 / 2;
 
 wall_thickness = 1.2;
 smaller_diameter = 34;
-larger_diameter = 39;
-connection_length = 20;
+larger_diameter = 40;
+connection_length = 25;
 
 // Adjustment for shrinking and random inperfections
 tolerance = 1.2;
 
-adapter_offset = 0.25;
-adapter_length = (larger_diameter - smaller_diameter) * 3;
+adapter_offset = 0.5;
+adapter_length = (larger_diameter - smaller_diameter - adapter_offset * 2);
 smaller_radius = (smaller_diameter / 2) + tolerance;
 larger_radius = (larger_diameter / 2) + tolerance;
 
