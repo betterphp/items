@@ -8,7 +8,7 @@ border_radius = 14;
 thickness = 6;
 
 linear_extrude(height = thickness / 2) {
-    offset(delta = -0.2) {
+    offset(delta = -0.5) {
         scale([0.8, 0.8])
         import(file = "magnetic_logo.svg", center = true);
     }
