@@ -1,22 +1,16 @@
 $fa = 1;
 $fs = 1.75 / 2;
 
-height = 100;
+height = 140;
 
-outer_diameter = 46.5;
-inner_diameter = 28.5;
-
-lip_diameter = outer_diameter + 4;
-lip_height = 2;
+outer_diameter = 45;
+inner_diameter = 29;
 
 curvey_radius = 6;
 
 difference() {
     union() {
-        cylinder(d = lip_diameter, h = lip_height);
-
-        translate([0, 0, lip_height])
-        cylinder(d = outer_diameter, h = height - lip_height - curvey_radius);
+        cylinder(d = outer_diameter, h = height - curvey_radius);
 
         translate([0, 0, height - curvey_radius])
         cylinder(d = outer_diameter - curvey_radius * 2, h = curvey_radius);
