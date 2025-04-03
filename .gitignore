@@ -5,6 +5,6 @@
 
 # Exported files
 *.stl
-# This one is used by another model
+# These ones are used by other models
 !/snowflake_pendant.stl
-
+!/skyrim_dagger/dagger_base.stl

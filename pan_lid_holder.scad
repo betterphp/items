@@ -4,7 +4,7 @@ $fa = 1;
 $fs = 1.75 / 2;
 
 lid_height = 38;
-lid_diameter = 176;
+lid_diameter = 220;
 wall_thickness = 4;
 lip_width = 20;
 
